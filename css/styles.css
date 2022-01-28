@@ -4,6 +4,7 @@
 основной цвет текста #757575;
 вторичный цвет текста (заголовки) #212121;
 цвет эффектов  #2196F3;
+цвет заливки иконок соцсетей #AFB1B8;
  */
 :root {
 	--primary-text-color: #757575;
@@ -12,6 +13,8 @@
 	--tertiary-background-color: #2F303A;
 	--conditions-color: #2196F3;
 	--conditions-subcolor: #FFFFFF;
+	--social-link-fill: #AFB1B8;
+	--social-link-subfill: #FFFFFF;
 }
 
 body {
@@ -334,9 +337,15 @@ header {
 	border-radius: 0px 0px 4px 4px;
 }
 
+.team-member * {
+	/* outline: 1px solid palevioletred; */
+
+}
+
+
 .member-description {
 	padding-top: 30px;
-	padding-bottom: 30px; 
+	padding-bottom: 30px;	
 }
 
 .team-member-name {
@@ -350,8 +359,45 @@ header {
 .team-member-area {
 	line-height: 1.19;
 	text-align: center;
+	margin-bottom: 16px;
 }
-  
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-link {
+	display: flex;
+	
+}
+
+.social-link:not(:last-child) {
+	margin-right: 10px;
+}
+
+.link.social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+
+	color: var(--social-link-fill);
+}
+
+.link.social:hover,
+.link.social:focus {
+	background-color: var(--conditions-color);
+	color: var(--social-link-subfill)
+}
+
+.icon-social {
+	fill: currentColor;
+}
+
 
 /* main portfolio*/
 
