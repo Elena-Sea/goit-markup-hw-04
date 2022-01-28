@@ -295,7 +295,8 @@ header {
 /* occupation and team */
 
 .occupation.title,
-.our-team.title {
+.our-team.title,
+.clients.title {
 	margin-bottom: 50px;
 	
 	font-size: 36px;
@@ -303,7 +304,8 @@ header {
 }
 
 .container.occupations, 
-.container.team-cards {
+.container.team-cards,
+.container.clients {
 	text-align: center;
 }
 
@@ -336,12 +338,6 @@ header {
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 }
-
-.team-member * {
-	/* outline: 1px solid palevioletred; */
-
-}
-
 
 .member-description {
 	padding-top: 30px;
@@ -391,12 +387,62 @@ header {
 .link.social:hover,
 .link.social:focus {
 	background-color: var(--conditions-color);
-	color: var(--social-link-subfill)
+	color: var(--social-link-subfill);
 }
 
 .icon-social {
 	fill: currentColor;
 }
+
+
+/* clients */
+
+
+/* .container.clients * {
+	outline: 1px solid palevioletred;
+
+} */
+
+.list.clients-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.client {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	box-sizing: border-box;
+	width: 170px;
+	height: 92px;
+}
+
+.client:not(:last-child) {
+	margin-right: 30px;
+}
+
+.link.client-link {
+	display: flex;
+	padding: 16px 32px;
+	
+	color: var(--social-link-fill);
+	border: 1px solid #AFB1B8;
+	border-radius: 4px;
+}
+
+.link.client-link:hover,
+.link.client-link:focus {
+	
+	color: var(--conditions-color);
+	border-color: var(--conditions-color);
+}
+
+.client .icon-client {
+	fill: currentColor;
+}
+
 
 
 /* main portfolio*/
@@ -474,11 +520,20 @@ header {
 
 /* footer */
 
+.container.foot {
+	display: flex;
+}
+
 .footer {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	
 	background-color: var(--tertiary-background-color);
+}
+
+.footer-contacts {
+	margin-right: 70px;
+	padding-right: 15px;
 }
 
 .studio-footer {
@@ -504,4 +559,37 @@ header {
 	text-decoration: none;
 	font-style: normal;
 	color: var(--conditions-subcolor);
+}
+
+.join {
+	display: flex;
+	flex-direction: column;
+	padding-top: 12px;
+}
+
+.interactive {
+	display: block;
+}
+
+.join-btn {
+	margin-bottom: 20px;
+
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: var(--conditions-subcolor);
+}
+
+.link.social.ft:hover,
+.link.social.ft:focus {
+	background-color: var(--conditions-color);
+	color: var(--social-link-subfill);
+}
+
+.link.social.ft {
+	color: var(--social-link-subfill);
+	background: rgba(255, 255, 255, 0.1);
 }
